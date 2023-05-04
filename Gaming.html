@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  href="jk.css" rel="style-sheet" type="text/css">
+    
+        </head>
+<body>
+    <script>
+        let count1=0,count2=0;
+        for(let i=0;i<3;i++){
+        let user=prompt("Enter snake water or gun");
+        let cpu=Math.floor(Math.random()*3);
+        document.write("User entered :"+user+"<br>");
+        if(cpu=='1'){
+            document.write("Computer entered : Water"+"<br>");
+        }
+        else if(cpu=='0'){
+            document.write("Computer entered : Snake"+"<br>");
+        }
+        else if(cpu=="2"){
+            document.write("Computer entered :Gun"+"<br>")
+        }
+        document.write("<br>");
+             
+               if(user=='Snake'&&cpu=='1'){
+count1++;
+                }
+                else if(user=='Snake'&&cpu=='2'){
+count2++;
+                }
+                else if(user=='Water'&&cpu=='2'){
+count1++;                }
+              
+                else if(user=='Water'&&cpu=='0'){
+count2++;
+                }
+                else if(user=='Gun'&&cpu=='0'){
+count1++;
+                }
+                else if(user=='Gun'&&cpu=='1'){
+count2++;
+                }
+                
+        }
+        if(count1>count2){
+            document.write("Yeah! You won the match!");
+        }
+        else if(count1<count2){
+            document.write("Sory! You loss the match");
+            prompt("Try for next time! Best of luck.");
+        }
+        else if(count1==count2){
+            document.write("Match got tied!");
+        }
+    </script>
+   </body>
+</html>
